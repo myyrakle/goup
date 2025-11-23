@@ -7,13 +7,13 @@ pub struct ConfigOptions {
         short,
         long,
         default_value = "false",
-        help = "Enable verbose output with go information"
+        help = "Automatic yes to prompts; assume 'yes' as answer to all prompts and run non-interactively"
     )]
-    pub verbose: bool,
+    pub yes: bool,
 }
 
 #[derive(Clone, Debug, Args)]
-#[clap(name = "active-toolchain", about = "Show the active toolchain")]
+#[clap(name = "uninstall", about = "Uninstall goup")]
 pub struct Command {
     #[clap(flatten)]
     pub value: ConfigOptions,
