@@ -3,9 +3,20 @@ mod command;
 use clap::Parser;
 
 fn main() {
-    let _args = command::Command::parse();
+    let args = command::Command::parse();
 
-    match _args.action {
+    match args.action {
+        command::SubCommand::Toolchain(cmd) => match cmd.action {
+            command::toolchain::SubCommand::List(_list_cmd) => {
+                println!("List command executed");
+            }
+            command::toolchain::SubCommand::Install(_install_cmd) => {
+                println!("Install command executed");
+            }
+            command::toolchain::SubCommand::Uninstall(_uninstall_cmd) => {
+                println!("Uninstall command executed");
+            }
+        },
         command::SubCommand::Show(cmd) => match cmd.action {
             Some(command::show::SubCommand::Profile(_profile_cmd)) => {
                 println!("Profile command executed");

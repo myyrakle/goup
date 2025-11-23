@@ -7,13 +7,13 @@ pub struct ConfigOptions {
         short,
         long,
         default_value = "false",
-        help = "Enable verbose output with go information"
+        help = "Enable verbose output with toolchain information"
     )]
     pub verbose: bool,
 }
 
 #[derive(Clone, Debug, Args)]
-#[clap(name = "active-toolchain", about = "Show the active toolchain")]
+#[clap(name = "list", about = "List installed toolchains")]
 pub struct Command {
     #[clap(flatten)]
     pub value: ConfigOptions,

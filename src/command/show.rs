@@ -12,7 +12,7 @@ pub struct ConfigOptions {
         short,
         long,
         default_value = "false",
-        help = "Enable verbose output with rustc information for all installed toolchains"
+        help = "Enable verbose output with go information for all installed toolchains"
     )]
     pub verbose: bool,
 }
