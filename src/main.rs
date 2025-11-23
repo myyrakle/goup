@@ -17,6 +17,9 @@ fn main() {
                 println!("Uninstall command executed");
             }
         },
+        command::SubCommand::Default(_cmd) => {
+            println!("Default command executed");
+        }
         command::SubCommand::Show(cmd) => match cmd.action {
             Some(command::show::SubCommand::Profile(_profile_cmd)) => {
                 println!("Profile command executed");
