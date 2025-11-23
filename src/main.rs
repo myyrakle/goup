@@ -37,5 +37,13 @@ fn main() {
         command::SubCommand::Update(_cmd) => {
             println!("Update command executed");
         }
+        command::SubCommand::Self_(cmd) => match cmd.action {
+            command::self_::SubCommand::Uninstall(_uninstall_cmd) => {
+                println!("Self uninstall command executed");
+            }
+            command::self_::SubCommand::Update(_update_cmd) => {
+                println!("Self update command executed");
+            }
+        },
     }
 }

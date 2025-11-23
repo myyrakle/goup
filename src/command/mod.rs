@@ -1,6 +1,7 @@
 use clap::Parser;
 
 pub mod default;
+pub mod self_;
 pub mod show;
 pub mod toolchain;
 pub mod update;
@@ -18,4 +19,5 @@ pub enum SubCommand {
     Default(default::Command),
     Show(show::Command),
     Update(update::Command),
+    Self_(self_::Command),
 }
