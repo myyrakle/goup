@@ -6,7 +6,7 @@ use clap::Args;
 pub struct ConfigOptions {}
 
 #[derive(Clone, Debug, Args)]
-#[clap(name = "update", about = "Update Rust toolchains and rustup")]
+#[clap(name = "update", about = "Update Go toolchains and rustup")]
 pub struct Command {
     #[clap(flatten)]
     pub value: ConfigOptions,
